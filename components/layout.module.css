@@ -30,9 +30,12 @@
 
 @media (max-width: 1280px) {
   .container {
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
     margin: 29px auto auto;
+    padding: 7px;
   }
+
   .header {
     height: 47px;
     display: flex;
@@ -47,5 +50,30 @@
   .logo {
     width: 225px;
     height: 47px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    max-width: 375px;
+    width: 100%;
+    margin: 29px auto 0px auto;
+    padding: 7px;
+  }
+
+  .header {
+    height: 47px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 23px;
+    margin-bottom: 31px;
+  }
+
+  .logo {
+    width: 200px;
+    height: 40px;
   }
 }
