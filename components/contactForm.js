@@ -27,22 +27,22 @@ export default function ContactForm() {
     if (email == '') {
       setInvalid(true);
     } else {
-      const postData = async () => {
-        const data = {
-          first_name: first,
-          last_name: last,
-          title: title,
-          email: email,
-          message: message
-        };
-        const response = await fetch('https://api.mwi.dev/contact', {
-          method: "POST",
-          headers: { 'content-type': 'application/json' },
-          body: JSON.stringify(data),
-        });
-        return response.json();
-      };
-      postData();
+      // const postData = async () => {
+      //   const data = {
+      //     first_name: first,
+      //     last_name: last,
+      //     title: title,
+      //     email: email,
+      //     message: message
+      //   };
+      //   const response = await fetch('https://api.mwi.dev/contact', {
+      //     method: "POST",
+      //     headers: { 'content-type': 'application/json' },
+      //     body: JSON.stringify(data),
+      //   });
+      //   return response.json();
+      // };
+      // postData();
       setFirst('');
       setLast('');
       setTitle('');
@@ -52,7 +52,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form id={'contactForm'}>
+    <form id={'contactForm'} className={styles.formContainer}>
       <div className={styles.inputContainer} id={'contactForm'}>
         <input
           className={`${styles.first} ${poppins.className}`}
